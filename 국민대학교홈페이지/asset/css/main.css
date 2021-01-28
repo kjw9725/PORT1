@@ -1,0 +1,439 @@
+@charset "utf-8";
+@import url(gridSet.css);
+@import url(gridView.css);
+
+html,
+body,
+h1,
+h2 {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	/*사이트 디자인 이미지 배경넣기*/
+	/*    background: url(../images/k_uni.png) no-repeat center top;*/
+}
+
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+ul::after,
+ol::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+li {
+	float: left;
+}
+
+/*그리드뷰 재설정*/
+.grid {
+	width: 1280px;
+	max-width: 100%;
+	/*그리드도 같이 줄어들게*/
+	z-index: -1;
+}
+
+/*공통 class*/
+
+/*속박스 class*/
+.ibx {
+	width: 1200px;
+	max-width: 100%;
+	/*최대가로크기 100%란 화면이 1280px보다 작으면 100%*/
+	margin: 0 auto;
+	/*outline: 3px dashed blue;*/
+
+
+}
+
+/*각 영역별 파티션 높이값 설정하기*/
+/*1.상단영역*/
+
+.t1 {
+	height: 75px;
+}
+
+/*로고*/
+.l1 {
+	background: url(../images/main_images/logo.gif) no-repeat left;
+}
+
+.l1 a {}
+
+.l2 {
+	position: relative;
+	/*PARENT*/
+}
+
+.gnb {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.gnb li {}
+
+.sp {
+	background: url(../images/main_images/startpage.jpg);
+	width: 100px;
+	height: 23px;
+	margin-top: 25px;
+	margin-right: 40px;
+}
+
+.bm {
+	background: url(../images/main_images/bookmark.jpg);
+	width: 80px;
+	height: 23px;
+	margin-top: 25px;
+	margin-right: 40px;
+}
+
+.box {
+	background: url(../images/main_images/list_bg.png) no-repeat 100%/100%;
+	width: 91px;
+	height: 27px;
+	margin-top: 25px;
+	margin-right: 58px;
+}
+
+.mbtn {
+	background: url(../images/main_images/btn_gnb_open.gif) no-repeat 100%/100%;
+	width: 57px;
+	height: 62px;
+	cursor: pointer;
+}
+
+.menu {
+	display: none;
+	position: relative;
+	width: 100%;
+	height: 72px;
+	background: #005AAB;
+}
+
+.mtxt {
+	display: none;
+	width: 100%;
+	height: 43px;
+	margin-top: 47px;
+	margin-left: 47px;
+}
+
+.mtxt span:first-child {
+	font-size: 15px;
+	color: #fff;
+}
+
+.mtxt span:last-child {
+	font-size: 18px;
+	color: #f89448;
+}
+
+.menu ul {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	width: 1215px;
+}
+
+.menu1 {
+	display: block;
+	width: 119px;
+	height: 72px;
+	background: url(../images/main_images/k_sprit.jpg) no-repeat 100%/100%;
+}
+
+.menu2 {
+	display: block;
+	width: 140px;
+	height: 72px;
+	background: url(../images/main_images/k_style.jpg);
+}
+
+.menu3 {
+	display: block;
+	width: 140px;
+	height: 72px;
+	display: block;
+	background: url(../images/main_images/k_guide.jpg);
+}
+
+.menu4 {
+	display: block;
+	width: 146px;
+	height: 72px;
+	display: block;
+	background: url(../images/main_images/kookmin.jpg);
+}
+
+.menu5 {
+	display: block;
+	width: 183px;
+	height: 72px;
+	background: url(../images/main_images/i_am_kookminin.jpg);
+}
+
+.menu6 {
+	display: block;
+	width: 179px;
+	height: 72px;
+	background: url(../images/main_images/eureka.jpg);
+}
+
+.menu7 {
+	display: block;
+	width: 179px;
+	height: 72px;
+	background: url(../images/main_images/k_creater.jpg);
+}
+
+.menu8 {
+	display: block;
+	width: 129px;
+	height: 72px;
+	background: url(../images/main_images/unik_event.jpg);
+}
+
+/*.
+.l2{
+    position: relative;
+}
+.sp{
+    position: absolute;
+    top: 0;
+    right: 300px;
+}
+
+.bm{
+    position: absolute;
+    top: 0;
+    right: 0;
+}*/
+/*2.컨텐츠1영역*/
+.cont1 {
+	position: relative;
+	width: 100%;
+}
+
+.c12 {
+	width: 100%;
+	height: 469px;
+}
+
+#slide {
+	/*사진을 싸고 있는 슬라이드*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	/*모든 슬라이드 5장이 옆으로 나열되도록
+	width 크기를 확보해야한다!!!*/
+	width: 100%;
+	height: 100%;
+}
+
+
+#slide li {
+	/*부모가 5배되었으므로 5등분함!*/
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+#slide li img {
+	/*이미지는 박스에 맞춤!*/
+	width: 100%;
+	height: 100%;
+}
+#slide a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.slide1 {
+	background: url(../images/main_images/banner1.jpg) no-repeat center;
+}
+
+.slide2 {
+	background: url(../images/main_images/banner2.jpg) no-repeat center;
+}
+
+.cbtn {
+	position: absolute;
+	bottom: 0;
+	right: 50%;
+	transform: translateX(50%);
+}
+
+
+.dbtn {
+	width: 13px;
+	height: 13px;
+	margin: 5px;
+	border: 1px solid #fff;
+	display: block;
+	border-radius: 50%;
+}
+
+
+.pause {
+	width: 21px;
+	height: 23px;
+}
+
+.cbtn .dbtn:hover{
+	animation: bannerbtn .4s ease-in-out alternate forwards;
+}
+@keyframes bannerbtn{
+	to{
+	background: #005aab;
+    width: 30px;
+    height: 13px;
+    border: none;
+	border-radius: 14px;
+	}
+}
+
+
+
+/*3.컨텐츠2영역*/
+#cont2 {
+	position: relative;
+	padding-top: 59px;
+
+}
+
+.cont2 > div {
+	cursor: pointer;
+}
+
+/*K콘텐츠*/
+.c21 {
+	width: 282px;
+	height: 283px;
+}
+
+.k1 {
+	background: url(../images/main_images/K_style_image.jpg) no-repeat center;
+}
+
+.k2 {
+	background: url(../images/main_images/k_guide_images.jpg);
+	margin-left: 24px;
+}
+
+.k3 {
+	background: url(../images/main_images/kookmin_images.jpg);
+	margin-left: 24px;
+}
+
+.k4 {
+	background: url(../images/main_images/i_am_kookmin_images.jpg);
+	margin-left: 24px;
+}
+
+/*K콘텐츠2*/
+.c22 {
+	width: 588px;
+	height: 220px;
+	margin-top: 58px;
+}
+
+.m1 {
+	background: url(../images/main_images/eureka_images.jpg);
+	margin-right: 24px;
+}
+
+.m2 {
+	background: url(../images/main_images/k_creater_images.jpg);
+}
+
+
+
+
+
+/*3.컨텐츠3영역*/
+#cont3 {
+	padding-top: 61px;
+
+}
+
+/*이벤트*/
+.c31 {
+	width: 588px;
+	height: 220px;
+}
+
+.e1 {
+	background: url(../images/main_images/event_images.jpg) no-repeat 100%/100%;
+	margin-right: 24px;
+}
+
+.e2 {
+	background: url(../images/main_images/eureka_eureka.jpg) no-repeat center;
+}
+
+/*unik*/
+.c32 {
+	width: 225px;
+	height: 80px;
+	margin-top: 58px;
+}
+
+.u1 {
+
+	background: url(../images/main_images/unik.jpg) no-repeat 100%/100%;
+	margin-left: 43px;
+}
+
+.u2 {
+	background: url(../images/main_images/unik_blog.jpg) no-repeat 100%/100%;
+	margin-left: 68px;
+}
+
+.u3 {
+	background: url(../images/main_images/unik_post.jpg) no-repeat 100%/100%;
+	margin-left: 68px;
+}
+
+.u4 {
+	background: url(../images/main_images/unik_opencast.jpg) no-repeat 100%/100%;
+	margin-left: 70px;
+}
+
+/*5.하단영역*/
+#info {
+	background: url(../images/main_images/f_img.jpg) no-repeat center;
+	margin-top: 55px;
+	background-color: #EEEEEE
+}
+
+.i1 {
+
+	height: 66px;
+}
+
+.f1 {}
+
+.f2 {}
+
+.f3 {}
+
+/*숨기기class*/
+.dn {
+	display: block;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
